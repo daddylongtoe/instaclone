@@ -72,11 +72,11 @@ export default function Header() {
                 </button>
                 {currentUser && (
                   <div className="flex items-center cursor-pointer">
-                    <Link to={`/p/${currentUser?.username}`}>
+                    <Link to={`/p/${currentUser?.displayName}`}>
                       <img
                         className="rounded-full h-8 w-8 flex"
-                        src={`/images/avatars/${currentUser?.username}.jpg`}
-                        alt={`${currentUser?.username} profile`}
+                        src={`/images/avatars/${currentUser?.displayName}.jpg`}
+                        alt={`${currentUser?.displayName} profile`}
                         onError={(e) => {
                           // e.target.src = DEFAULT_IMAGE_PATH;
                           console.log('Error image path');
